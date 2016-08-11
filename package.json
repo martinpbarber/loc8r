@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "lint": "jshint **.js",
-    "prestart": "npm run lint",
+    "prestart": "[ \"$NODE_ENV\" != production ] && npm run lint",
     "start": "node ./bin/www"
   },
   "dependencies": {
